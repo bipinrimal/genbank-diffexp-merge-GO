@@ -1,0 +1,4 @@
+gene_id,log2foldchange,pvalue
+test_gene_1,2.1,0.05
+test_gene_2,-1.5,0.01
+test_gene_3,0.8,0.2
