@@ -1,0 +1,20 @@
+LOCUS       test_sequence           100 bp    DNA     linear   UNK 01-JAN-2022
+FEATURES             Location/Qualifiers
+     CDS             1..100
+                     /locus_tag="test_gene_1"
+                     /gene="Test Gene 1"
+                     /sequence:RefSeq="AC123456.7"
+                     /GO_process="process1"
+                     /GO_component="component1"
+                     /GO_function="function1"
+     CDS             50..75
+                     /locus_tag="test_gene_2"
+                     /gene="Test Gene 2"
+                     /sequence:RefSeq="BC234567.8"
+                     /GO_process="process2"
+                     /GO_component="component2"
+                     /GO_function="function2"
+ORIGIN
+        1 ATCGATCGAT CGATCGATCG ATCGATCGAT CGATCGATCG ATCGATCGAT CGATCGATCG
+       51 ATCGATCGAT CGATCGATCG ATCGATCGAT CGATCGATCG AT
+//
