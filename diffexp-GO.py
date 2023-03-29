@@ -2,7 +2,7 @@ import argparse
 from Bio import SeqIO
 import pandas as pd
 
-# Define command-line arguments
+# # Create an argument parser to specify the input and output files
 parser = argparse.ArgumentParser(description="Merge genbank and differential expression data")
 parser.add_argument("-gb", "--genbank", type=str, required=True, help="Path to genbank file")
 parser.add_argument("-i", "--diffexp", type=str, required=True, help="Path to differential expression file")
@@ -28,8 +28,10 @@ for record in SeqIO.parse(args.genbank, "genbank"):
                 "go_function": go_function,
             }
 
-# Parse the differential gene expression file and merge with genbank data
+# Load the differential expression file into a pandas DataFrame
 diff_exp_data = pd.read_csv(args.diffexp)
+
+# Merge the genbank and differential expression data based on locus_tag/gene_id
 merged_data = pd.merge(diff_exp_data, pd.DataFrame.from_dict(genbank_data, orient="index"), left_on="gene_id", right_index=True, how="left")
 
 # Create new columns for GO_process, GO_component, and GO_function and fill with genbank data
