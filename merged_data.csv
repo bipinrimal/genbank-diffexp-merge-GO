@@ -1,0 +1,4 @@
+gene_id,log2foldchange,pvalue,gene,refseq,GO_process,GO_component,GO_function
+test_gene_1,2.1,0.05,Test Gene 1,AC123456.7,process1,component1,function1
+test_gene_2,-1.5,0.01,Test Gene 2,BC234567.8,process2,component2,function2
+test_gene_3,0.8,0.2,,,,
